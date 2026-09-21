@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcio Oratorio — Luca Montanari</title>
+<meta name="description" content="Partite serali sotto i riflettori, con la nebbia sul campo: l'azione e i momenti fra un tempo e l'altro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="preload" as="image" href="../assets/media/full/calcio-oratorio/calcio-oratorio-05.jpg" fetchpriority="high">
+</head>
+<!-- PAGINA GENERATA da tools/build-media.ps1: non modificarla a mano,
+     le modifiche si perdono al prossimo lancio. I testi stanno in assets/js/media.js. -->
+<body class="page-project" data-project="calcio-oratorio" data-base="../">
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grain"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">LM<span class="dot">.</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="../index.html" data-cursor="link">Home</a>
+    <a href="../index.html#work" data-cursor="link">Portfolio</a>
+    <a href="../index.html#about" data-cursor="link">Chi sono</a>
+    <a href="../index.html#services" data-cursor="link">Servizi</a>
+    <a href="../index.html#contact" data-cursor="link">Contatti</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+    </button>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html">Home</a>
+  <a href="../index.html#work">Portfolio</a>
+  <a href="../index.html#about">Chi sono</a>
+  <a href="../index.html#services">Servizi</a>
+  <a href="../index.html#contact">Contatti</a>
+</div>
+
+<main>
+  <header class="pj-hero">
+    <img class="pj-cover" src="../assets/media/full/calcio-oratorio/calcio-oratorio-05.jpg" alt="" fetchpriority="high" decoding="async">
+    <div class="pj-scrim" aria-hidden="true"></div>
+    <div class="container pj-intro">
+      <a class="pj-back" href="../index.html#work" data-cursor="link">← Tutti i lavori</a>
+      <p class="section-eyebrow">— Sport</p>
+      <h1 class="pj-title">Calcio Oratorio</h1>
+      <p class="pj-meta">aprile 2026 · 14 foto</p>
+      <p class="pj-desc">Partite serali sotto i riflettori, con la nebbia sul campo: l'azione e i momenti fra un tempo e l'altro.</p>
+    </div>
+  </header>
+
+  <section class="pj-work">
+    <div class="container">
+      <div class="gallery" id="gallery">
+        <!-- riquadri generati da main.js a partire da assets/js/media.js -->
+      </div>
+    </div>
+  </section>
+
+  <nav class="container pj-jump" aria-label="Altri progetti">
+    <a class="prev" href="faenza-crescione.html" data-cursor="link">
+      <span class="dir">← Precedente</span>
+      <span class="name">FaenzaCrescione</span>
+    </a>
+    <a class="next" href="marco-bianchedi.html" data-cursor="link">
+      <span class="dir">Successivo →</span>
+      <span class="name">Marco Bianchedi — Lista civica</span>
+    </a>
+  </nav>
+
+  <section class="pj-cta">
+    <div class="container">
+      <h2 class="section-title">Ti serve un servizio così?</h2>
+      <p>Raccontami che evento hai in mente e quando: ti rispondo con una proposta.</p>
+      <a class="btn btn-primary" href="../index.html#contact" data-cursor="link">Scrivimi<i>→</i></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="../index.html" class="nav-logo">LM<span class="dot">.</span></a>
+      <p>Fotografia &amp; Video — Romagna</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#work">Portfolio</a>
+      <a href="../index.html#about">Chi sono</a>
+      <a href="../index.html#services">Servizi</a>
+      <a href="../index.html#contact">Contatti</a>
+    </div>
+    <div class="footer-note">
+      <span id="year"></span> © Luca Montanari. Tutti i diritti riservati.
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Chiudi">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Precedente">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Successivo">›</button>
+  <div class="lb-content" id="lbContent"></div>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<script src="../assets/js/media.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

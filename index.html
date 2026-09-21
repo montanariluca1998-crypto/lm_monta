@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luca Montanari — Fotografo e videomaker in Romagna</title>
+<meta name="description" content="Fotografia e video di eventi, sport e cultura in Romagna. I lavori: Modigliana City Run, FaenzaCrescione, Museo Diffuso di Granarolo, Calcio Oratorio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" as="image" href="assets/media/hero/hero-1.jpg" fetchpriority="high">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-count"><span id="preloaderNum">0</span>%</div>
+  <div class="preloader-name">LUCA MONTANARI</div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Grain overlay -->
+<div class="grain"></div>
+
+<!-- Progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav-logo">LM<span class="dot">.</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home" data-cursor="link">Home</a>
+    <a href="#work" data-cursor="link">Portfolio</a>
+    <a href="#about" data-cursor="link">Chi sono</a>
+    <a href="#services" data-cursor="link">Servizi</a>
+    <a href="#contact" data-cursor="link">Contatti</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+    </button>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#work">Portfolio</a>
+  <a href="#about">Chi sono</a>
+  <a href="#services">Servizi</a>
+  <a href="#contact">Contatti</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <!-- scatti reali a rotazione; decorativi, quindi alt vuoto -->
+      <div class="hero-slides" id="heroSlides" aria-hidden="true">
+        <img class="hero-slide is-active" src="assets/media/hero/hero-1.jpg" alt="" fetchpriority="high" decoding="async">
+        <img class="hero-slide" src="assets/media/hero/hero-2.jpg" alt="" fetchpriority="low" decoding="async">
+        <img class="hero-slide" src="assets/media/hero/hero-3.jpg" alt="" fetchpriority="low" decoding="async">
+        <img class="hero-slide" src="assets/media/hero/hero-4.jpg" alt="" fetchpriority="low" decoding="async">
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <canvas id="particles"></canvas>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-tag reveal-line"><span>Fotografo &amp; Videomaker — Romagna</span></p>
+      <h1 class="hero-title">
+        <span class="line" data-speed="0.4"><span class="reveal">Fotografo</span></span>
+        <span class="line" data-speed="0.6"><span class="reveal">quello che</span></span>
+        <span class="line" data-speed="0.8"><span class="reveal">succede</span> <span class="reveal outline">qui.</span></span>
+      </h1>
+      <p class="hero-sub reveal-line"><span>Eventi, sport e cultura in Romagna — foto e video per chi organizza, gareggia e va in scena.</span></p>
+      <div class="hero-cta reveal-line">
+        <span>
+          <a href="#work" class="btn btn-primary" data-cursor="link">Guarda i lavori<i>→</i></a>
+          <a href="#contact" class="btn btn-ghost" data-cursor="link">Contattami</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-marquee">
+      <div class="marquee-track">
+        <span>MODIGLIANA CITY RUN</span><span>•</span><span>MUSEO EFFIMERO</span><span>•</span><span>FAENZACRESCIONE</span><span>•</span><span>CALCIO ORATORIO</span><span>•</span>
+        <span>MODIGLIANA CITY RUN</span><span>•</span><span>MUSEO EFFIMERO</span><span>•</span><span>FAENZACRESCIONE</span><span>•</span><span>CALCIO ORATORIO</span><span>•</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scorri</span>
+      <div class="scroll-hint-line"><i></i></div>
+    </div>
+  </section>
+
+  <!-- WORK / GALLERY -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow reveal-up">— Lavori</p>
+        <h2 class="section-title reveal-up">Portfolio</h2>
+      </div>
+
+      <div class="gallery projects" id="gallery">
+        <!-- schede generate da main.js a partire da assets/js/media.js;
+             ognuna è un link alla pagina del progetto in progetti/ -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal-up">
+        <div class="about-frame">
+          <img class="about-photo" src="assets/media/thumbs/museo-effimero/museo-effimero-01.jpg" alt="Scatto dal progetto Museo Diffuso Granarolo — Effimero" loading="lazy" decoding="async">
+          <div class="about-badge">
+            <strong>2026</strong>
+            <span>primo anno<br>di lavori</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="section-eyebrow reveal-up">— Chi sono</p>
+        <h2 class="section-title reveal-up">Ciao, sono Luca.</h2>
+        <p class="about-text reveal-up">
+          Ho cominciato a fotografare sul serio nel 2026 e da allora seguo quello che succede dalle mie
+          parti: gare podistiche, partite serali, eventi di piazza, teatro fra le case. Sono i lavori che
+          trovi qui sopra, tutti girati fra aprile e giugno di quest'anno.
+        </p>
+        <p class="about-text reveal-up">
+          Lavoro in Romagna, fra Modigliana, Faenza e Granarolo. Faccio sia le foto sia i video: dalla
+          stessa giornata possono uscire il servizio fotografico e i verticali pronti per i social.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head center">
+        <p class="section-eyebrow reveal-up">— Cosa faccio</p>
+        <h2 class="section-title reveal-up">Servizi</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal-up">
+          <span class="service-num">01</span>
+          <h3>Eventi e manifestazioni</h3>
+          <p>Sagre, feste, iniziative pubbliche e comunali: seguo la giornata dall'allestimento alla chiusura e consegno la selezione pronta da pubblicare.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <span class="service-num">02</span>
+          <h3>Sport</h3>
+          <p>Corse, partite e gare: le foto d'azione e tutto il contorno — la partenza, il pubblico, l'arrivo.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <span class="service-num">03</span>
+          <h3>Cultura e documentazione</h3>
+          <p>Spettacoli, rassegne e progetti per enti, musei e associazioni, anche in condizioni di luce difficili.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <span class="service-num">04</span>
+          <h3>Video verticali per social</h3>
+          <p>Reel girati e montati per Instagram e TikTok, con testi a schermo: pronti da caricare.</p>
+        </div>
+      </div>
+
+      <p class="services-note reveal-up" style="text-align:center">
+        Ti serve qualcosa che non è in elenco? Scrivimi lo stesso: al momento lavoro un po' su tutto.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="section-eyebrow reveal-up">— Lavoriamo insieme</p>
+        <h2 class="section-title reveal-up">Hai un progetto<br>in mente?</h2>
+        <p class="about-text reveal-up">Hai un evento, una gara o uno spettacolo da far raccontare? Scrivimi due righe su cosa
+          ti serve e quando: ti rispondo con una proposta.</p>
+
+        <div class="contact-details reveal-up">
+          <a href="mailto:montanariluca1998@gmail.com" data-cursor="link">montanariluca1998@gmail.com</a>
+        </div>
+
+        <div class="socials reveal-up">
+          <a href="https://www.instagram.com/lm_monta/" target="_blank" rel="noopener" data-cursor="link">Instagram</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-up" id="contactForm">
+        <div class="field">
+          <input type="text" id="fName" name="name" required placeholder=" ">
+          <label for="fName">Nome e cognome</label>
+        </div>
+        <div class="field">
+          <input type="email" id="fEmail" name="email" required placeholder=" ">
+          <label for="fEmail">Email</label>
+        </div>
+        <div class="field">
+          <label class="field-label" for="fType">Di cosa si tratta</label>
+          <select id="fType" name="type">
+            <option value="evento">Evento o manifestazione</option>
+            <option value="sport">Gara o partita</option>
+            <option value="cultura">Spettacolo o documentazione</option>
+            <option value="video">Video per i social</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="field">
+          <textarea id="fMsg" name="message" required placeholder=" " rows="4"></textarea>
+          <label for="fMsg">Raccontami il tuo progetto</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" data-cursor="link">
+          <span class="btn-text">Invia messaggio</span>
+          <span class="btn-loader"></span>
+        </button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="nav-logo">LM<span class="dot">.</span></a>
+      <p>Fotografia &amp; Video — Italia</p>
+    </div>
+    <div class="footer-links">
+      <a href="#work">Portfolio</a>
+      <a href="#about">Chi sono</a>
+      <a href="#services">Servizi</a>
+      <a href="#contact">Contatti</a>
+    </div>
+    <div class="footer-note">
+      <span id="year"></span> © Luca Montanari. Tutti i diritti riservati.
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Chiudi">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Precedente">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Successivo">›</button>
+  <div class="lb-content" id="lbContent"></div>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<script src="assets/js/media.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
